@@ -1,0 +1,33 @@
+.container {
+	gap: 2rem;
+}
+body {
+	background-color: #e0e0e0;
+}
+.tab-head {
+	width: 100%;
+}
+.tab-head button {
+	display: block;
+	margin-left: auto;
+}
+.history-tab {
+	padding: 1.2rem;
+	background: linear-gradient(225deg, #cacaca, #f0f0f0);
+	box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
+		2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
+	min-height: 75vh;
+}
+.history-tab * {
+	border-radius: 3px;
+}
+
+.history-tab table tr {
+	text-align: right;
+}
+.history-tab table tr:nth-child(1) {
+	border-bottom: 1px solid black;
+}
+.history-tab table tr:nth-child(even) {
+	background-color: rgba(128, 128, 128, 0.178);
+}

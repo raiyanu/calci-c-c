@@ -12,6 +12,39 @@
 	background: linear-gradient(225deg, #cacaca, #f0f0f0);
 	box-shadow: -20px 20px 60px #bebebe, 20px -20px 60px #ffffff;
 	padding: 2rem;
+	animation: hop-up 250ms ease-in-out;
+}
+.numpad {
+	animation: hop-up 250ms ease-in-out;
+}
+.numpad button:nth-child(4n + 4) {
+	animation: draw-in-left 1050ms ease-in;
+}
+.numpad button:nth-child(4n + 3) {
+	animation: draw-in-left 850ms ease-in;
+}
+.numpad button:nth-child(4n + 2) {
+	animation: draw-in-left 650ms ease-in;
+}
+.numpad button:nth-child(4n + 1) {
+	animation: draw-in-left 450ms ease-in;
+}
+@keyframes draw-in-left {
+	from {
+		transform: translateX(20px);
+	}
+	to {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes hop-up {
+	from {
+		transform: translateY(20px) translateX(20px);
+	}
+	to {
+		transform: translateY(0px) translateX(0px);
+	}
 }
 .wrapper {
 	display: flex;
