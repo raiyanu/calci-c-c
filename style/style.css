@@ -41,3 +41,15 @@
 	-ms-user-select: none; /* IE 10 and IE 11 */
 	user-select: none;
 }
+.util span {
+	display: inline-block;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	aspect-ratio: 1/1;
+	background-color: rgba(54, 54, 54, 0.075);
+	vertical-align: middle;
+	line-height: 120%;
+	cursor: pointer;
+}

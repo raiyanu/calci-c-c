@@ -17,28 +17,31 @@
             <div class="wrapper">
                 <div class="head f-between">
                     <h2>Calci</h2>
-                    <div class="util" style="cursor: pointer;">o o o </div>
+                    <i class="util">Fix : <span onclick="fix = 0">0</span>
+                        <span onclick="fix = 2">2</span>
+                        <span onclick="fix = 4">4</span> </i>
                 </div>
-                <input type="number" id="numberField" style="direction: rtl;">
+                <input type="number" step="any" id="numberField" style="direction: rtl;">
                 <div class="numpad">
                     <button onclick="numpadHit(7)">7</button>
                     <button onclick="numpadHit(8)">8</button>
                     <button onclick="numpadHit(9)">9</button>
-                    <button onclick="numpadHit('DELETE')">DEL</button>
+                    <button onclick="Del()">DEL</button>
                     <button onclick="numpadHit(4)">4</button>
                     <button onclick="numpadHit(5)">5</button>
                     <button onclick="numpadHit(6)">6</button>
-                    <button onclick="numpadHit('ADDITION')">+</button>
+                    <button onclick="Operator('ADDITION')">+</button>
                     <button onclick="numpadHit(1)">1</button>
                     <button onclick="numpadHit(2)">2</button>
                     <button onclick="numpadHit(3)">3</button>
-                    <button onclick="numpadHit('SUBTRACTION')">-</button>
+                    <button onclick="Operator('SUBTRACTION')">-</button>
                     <button onclick="numpadHit('.')">.</button>
                     <button onclick="numpadHit(0)">0</button>
-                    <button onclick="numpadHit('DIVISON')">/</button>
-                    <button onclick="numpadHit('MULTIPLICATION')">x</button>
-                    <button style="grid-column-end: span 2;" onclick="numpadHit('RESET')">RESET</button>
-                    <button style="grid-column-end: span 2;" onclick="numpadHit('EQUALS')"> = </button>
+                    <button onclick="Operator('DIVISON')">/</button>
+                    <button onclick="Operator('MULTIPLICATION')">x</button>
+                    <button style="grid-column-end: span 2;"
+                        onclick="prevNum=''; ops = '';numberField.value = '';hasDecimal = false;">RESET</button>
+                    <button style="grid-column-end: span 2;" onclick="EQUALS()"> = </button>
                 </div>
             </div>
         </div>
