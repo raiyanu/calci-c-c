@@ -1,0 +1,13 @@
+.f-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.f-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.f-col {
+	flex-direction: column;
+}

@@ -1,0 +1,43 @@
+.container {
+	width: 100%;
+	max-width: minmax(1200px, 100vw);
+	overflow-x: clip;
+	margin-inline: auto;
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+.calci {
+	width: 400px;
+	border-radius: 20px;
+	background: linear-gradient(225deg, #cacaca, #f0f0f0);
+	box-shadow: -20px 20px 60px #bebebe, 20px -20px 60px #ffffff;
+	padding: 2rem;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	color: rgb(100, 100, 100);
+	gap: 1rem;
+}
+.wrapper input {
+	width: 100%;
+}
+.calci .wrapper input {
+	color: rgb(120, 120, 120);
+	padding: 10px;
+	font-size: 1.5rem;
+}
+.numpad {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	color: white;
+}
+.numpad button {
+	color: rgb(120, 120, 120);
+	font-size: 1.4rem;
+	padding-inline: 1.5rem;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none;
+}

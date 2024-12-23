@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calic | Home</title>
+    <link rel="stylesheet" href="./style/reset.css">
+    <link rel="stylesheet" href="./style/pally.css">
+    <link rel="stylesheet" href="./style/util.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="container f-center">
+        <div class="calci">
+            <div class="wrapper">
+                <div class="head f-between">
+                    <h2>Calci</h2>
+                    <div class="util" style="cursor: pointer;">o o o </div>
+                </div>
+                <input dir="rtl" type="number" id="numberField" style="direction: rtl;">
+                <div class="numpad">
+                    <button onclick="numpadHit(7)">7</button>
+                    <button onclick="numpadHit(8)">8</button>
+                    <button onclick="numpadHit(9)">9</button>
+                    <button onclick="numpadHit('DELETE')">DEL</button>
+                    <button onclick="numpadHit(4)">4</button>
+                    <button onclick="numpadHit(5)">5</button>
+                    <button onclick="numpadHit(6)">6</button>
+                    <button onclick="numpadHit('ADDITION')">+</button>
+                    <button onclick="numpadHit(1)">1</button>
+                    <button onclick="numpadHit(2)">2</button>
+                    <button onclick="numpadHit(3)">3</button>
+                    <button onclick="numpadHit('SUBTRACTION')">-</button>
+                    <button onclick="numpadHit('.')">.</button>
+                    <button onclick="numpadHit(0)">0</button>
+                    <button onclick="numpadHit('DIVISON')">/</button>
+                    <button onclick="numpadHit('MULTIPLICATION')">x</button>
+                    <button style="grid-column-end: span 2;" onclick="numpadHit('RESET')">RESET</button>
+                    <button style="grid-column-end: span 2;" onclick="numpadHit('EQUALS')"> = </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
