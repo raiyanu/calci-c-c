@@ -6,6 +6,9 @@ body {
 }
 .tab-head {
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 .tab-head button {
 	display: block;
@@ -17,6 +20,14 @@ body {
 	box-shadow: inset 2px 2px 5px #bcbcbc, inset -2px -2px 5px #ffffff,
 		2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
 	min-height: 75vh;
+	max-height: 500px;
+	min-width: 350px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-direction: column;
+	animation: hop-up 550ms ease-in-out;
+	display: none;
 }
 .history-tab * {
 	border-radius: 3px;
@@ -30,4 +41,35 @@ body {
 }
 .history-tab table tr:nth-child(even) {
 	background-color: rgba(128, 128, 128, 0.178);
+}
+.tab-body {
+	margin-top: 12px;
+	gap: 1rem;
+	max-height: 90%;
+	height: 70%;
+	max-height: 360px;
+	overflow-y: scroll;
+	text-align: right;
+	flex-grow: 1;
+	flex-shrink: 0;
+	width: 100%;
+}
+.tab-body::-webkit-scrollbar {
+	width: 1rem;
+}
+.tab-body > div {
+	margin-bottom: 1rem;
+	background-color: rgba(128, 128, 128, 0.178);
+	padding: 1rem;
+}
+
+.history-icon {
+	height: 30px;
+	position: fixed;
+	top: 1rem;
+	right: 1rem;
+	visibility: hidden;
+}
+.show {
+	visibility: visible;
 }

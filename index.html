@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calic | Home</title>
+    <title>Calic | Just 100,000$ for sale</title>
     <link rel="stylesheet" href="./style/reset.css">
     <link rel="stylesheet" href="./style/pally.css">
     <link rel="stylesheet" href="./style/util.css">
@@ -31,67 +31,44 @@
                     <button onclick="numpadHit(4)">4</button>
                     <button onclick="numpadHit(5)">5</button>
                     <button onclick="numpadHit(6)">6</button>
-                    <button onclick="Operator('ADDITION')">+</button>
+                    <button onclick="Operator('+')">+</button>
                     <button onclick="numpadHit(1)">1</button>
                     <button onclick="numpadHit(2)">2</button>
                     <button onclick="numpadHit(3)">3</button>
-                    <button onclick="Operator('SUBTRACTION')">-</button>
+                    <button onclick="Operator('-')">-</button>
                     <button onclick="numpadHit('.')">.</button>
                     <button onclick="numpadHit(0)">0</button>
-                    <button onclick="Operator('DIVISON')">/</button>
-                    <button onclick="Operator('MULTIPLICATION')">x</button>
+                    <button onclick="Operator('/')">/</button>
+                    <button onclick="Operator('*')">x</button>
                     <button style="grid-column-end: span 2;"
                         onclick="prevNum=''; ops = '';numberField.value = '';hasDecimal = false;">RESET</button>
                     <button style="grid-column-end: span 2;" onclick="EQUALS()"> = </button>
                 </div>
             </div>
         </div>
-        <div class="history-tab">
+        <div class="history-tab" id="historyTab">
             <div class="tab-head">
-                <button>x</button>
+                <h3>History</h3>
+                <button style="height: max-content; line-height: 0.8rem;vertical-align: middle;"
+                    onclick="historyTab.style.display = 'none'; historyIcon.style.visibility = 'visible'">x</button>
             </div>
-            <div class="tab-body">
-                <table>
-                    <tr>
-                        <th>S.no</th>
-                        <th>Operand</th>
-                        <th>Operator</th>
-                        <th>Operand</th>
-                        <th>Result</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>700</td>
-                        <td>+</td>
-                        <td>700</td>
-                        <td>1400</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>700</td>
-                        <td>+</td>
-                        <td>700</td>
-                        <td>1400</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>700</td>
-                        <td>+</td>
-                        <td>700</td>
-                        <td>1400</td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td>700</td>
-                        <td>+</td>
-                        <td>700</td>
-                        <td>1400</td>
-                    </tr>
-                </table>
+            <div class="tab-body" id="historyTabElement">
             </div>
+            <button style="width: 100%;" onclick="history.clearHistory(); location.reload()">Clear History</button>
         </div>
     </div>
+    <script src="./history.js"></script>
     <script src="main.js"></script>
+    <script src="./keypress.js"></script>
+    <svg class="history-icon show" id="historyIcon"
+        onclick="historyTab.style.display = 'flex'; this.style.visibility = 'hidden'" xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512">
+        <path fill="var(--ci-primary-color, currentColor)"
+            d="M256.25,16A240,240,0,0,0,88,84.977V16H56V144H184V112H106.287A208,208,0,0,1,256.25,48C370.8,48,464,141.2,464,255.75S370.8,463.5,256.25,463.5,48.5,370.3,48.5,255.75h-32A239.75,239.75,0,0,0,425.779,425.279,239.75,239.75,0,0,0,256.25,16Z"
+            class="ci-primary" />
+        <polygon fill="var(--ci-primary-color, currentColor)"
+            points="240 111.951 239.465 288 368 288 368 256 271.563 256 272 112.049 240 111.951" class="ci-primary" />
+    </svg>
 </body>
 
 </html>
