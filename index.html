@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calic | Just 100,000$ for sale</title>
-    <link rel="stylesheet" href="./style/reset.css">
-    <link rel="stylesheet" href="./style/pally.css">
-    <link rel="stylesheet" href="./style/util.css">
-    <link rel="stylesheet" href="./style/style.css">
-    <link rel="stylesheet" href="./style/history-tab.css">
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/pally.css" />
+    <link rel="stylesheet" href="./style/util.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/history-tab.css" />
 </head>
 
 <body>
@@ -17,49 +17,56 @@
         <div class="calci">
             <div class="wrapper">
                 <div class="head f-between">
-                    <h2>Calci</h2>
-                    <i class="util">Fix : <span onclick="fix = 0">0</span>
-                        <span onclick="fix = 2">2</span>
-                        <span onclick="fix = 4">4</span> </i>
+                    <h2>Calculator</h2>
+                    <i class="util">Fix : <span class="fixed-action" data-action-fixed="0">0</span>
+                        <span class="fixed-action active" data-action-fixed="2">2</span>
+                        <span class="fixed-action" data-action-fixed="4">4</span>
+                    </i>
                 </div>
-                <input type="number" step="any" id="numberField" style="text-align: right;">
+                <p id="support_section" style="
+							text-align: right;
+							-webkit-user-select: none;
+							-ms-user-select: none;
+							user-select: none;
+						"></p>
+                <input type="number" step="any" id="numberField" disabled style="text-align: right" />
                 <div class="numpad">
-                    <button onclick="numpadHit(7)">7</button>
-                    <button onclick="numpadHit(8)">8</button>
-                    <button onclick="numpadHit(9)">9</button>
-                    <button onclick="Del()">DEL</button>
-                    <button onclick="numpadHit(4)">4</button>
-                    <button onclick="numpadHit(5)">5</button>
-                    <button onclick="numpadHit(6)">6</button>
-                    <button onclick="Operator('+')">+</button>
-                    <button onclick="numpadHit(1)">1</button>
-                    <button onclick="numpadHit(2)">2</button>
-                    <button onclick="numpadHit(3)">3</button>
-                    <button onclick="Operator('-')">-</button>
-                    <button onclick="numpadHit('.')">.</button>
-                    <button onclick="numpadHit(0)">0</button>
-                    <button onclick="Operator('/')">/</button>
-                    <button onclick="Operator('*')">x</button>
-                    <button style="grid-column-end: span 2;"
-                        onclick="prevNum=''; ops = '';numberField.value = '';hasDecimal = false;">RESET</button>
-                    <button style="grid-column-end: span 2;" onclick="EQUALS()"> = </button>
+                    <button class="numpad-button" data-value="7">7</button>
+                    <button class="numpad-button" data-value="8">8</button>
+                    <button class="numpad-button" data-value="9">9</button>
+                    <button class="action-button" data-action="del">DEL</button>
+                    <button class="numpad-button" data-value="4">4</button>
+                    <button class="numpad-button" data-value="5">5</button>
+                    <button class="numpad-button" data-value="6">6</button>
+                    <button class="action-button" data-action="+">+</button>
+                    <button class="numpad-button" data-value="1">1</button>
+                    <button class="numpad-button" data-value="2">2</button>
+                    <button class="numpad-button" data-value="3">3</button>
+                    <button class="action-button" data-action="-">-</button>
+                    <button class="numpad-button" data-value=".">.</button>
+                    <button class="numpad-button" data-value="0">0</button>
+                    <button class="action-button" data-action="/">/</button>
+                    <button class="action-button" data-action="*">x</button>
+                    <button class="action-button" style="grid-column-end: span 2" data-action="reset"> RESET </button>
+                    <button class="action-button" style="grid-column-end: span 2" data-action="="> = </button>
                 </div>
             </div>
         </div>
         <div class="history-tab" id="historyTab">
             <div class="tab-head">
                 <h3>History</h3>
-                <button style="height: max-content; line-height: 0.8rem;vertical-align: middle;"
-                    onclick="historyTab.style.display = 'none'; historyIcon.style.visibility = 'visible'">x</button>
+                <button style="
+							height: max-content;
+							line-height: 0.8rem;
+							vertical-align: middle;
+						" onclick="historyTab.style.display = 'none'; historyIcon.style.visibility = 'visible'"> x </button>
             </div>
-            <div class="tab-body" id="historyTabElement">
-            </div>
-            <button style="width: 100%;" onclick="history.clearHistory(); location.reload()">Clear History</button>
+            <div class="tab-body" id="historyTabElement"></div>
+            <button style="width: 100%" id="clearHistoryButton"> Clear History </button>
         </div>
     </div>
-    <script src="./history.js"></script>
-    <script src="main.js"></script>
-    <script src="./keypress.js"></script>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./keypress.js"></script>
     <svg class="history-icon show" id="historyIcon"
         onclick="historyTab.style.display = 'flex'; this.style.visibility = 'hidden'" xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 512 512">
