@@ -24,7 +24,7 @@ const numpadHit = (InputNumber) => {
 
 const OperatorHit = (operator) => {
     if (!numberField.value == "") {
-        calculator.addInput(parseInt(numberField.value))
+        calculator.addInput(parseFloat(numberField.value))
     }
     calculator.addInput(operator)
     numberField.value = "";
@@ -32,10 +32,15 @@ const OperatorHit = (operator) => {
 
 const EQUALS = () => {
     console.log("= Clicked");
-    calculator.addInput(parseInt(numberField.value));
+    console.log(calculator.input);
+    if (!numberField.value == "") {
+        calculator.addInput(parseFloat(numberField.value))
+    }
     const result = calculator.evaluate(fix);
     console.log("result : ", result);
-    numberField.value = result;
+    if (result) {
+        numberField.value = result;
+    }
 };
 
 document.addEventListener('DOMContentLoaded', () => {

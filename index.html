@@ -29,7 +29,7 @@
 							-ms-user-select: none;
 							user-select: none;
 						"></p>
-                <input type="number" step="any" id="numberField" disabled style="text-align: right" />
+                <input type="text" step="any" id="numberField" disabled style="text-align: right" />
                 <div class="numpad">
                     <button class="numpad-button" data-value="7">7</button>
                     <button class="numpad-button" data-value="8">8</button>
@@ -68,8 +68,8 @@
     <script type="module" src="./main.js"></script>
     <script type="module" src="./keypress.js"></script>
     <svg class="history-icon show" id="historyIcon"
-        onclick="historyTab.style.display = 'flex'; this.style.visibility = 'hidden'" xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 512 512">
+        onclick="historyTab.style.display = 'flex'; this.style.visibility = 'hidden'; historyTabElement.scrollBy(0,20000);"
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path fill="var(--ci-primary-color, currentColor)"
             d="M256.25,16A240,240,0,0,0,88,84.977V16H56V144H184V112H106.287A208,208,0,0,1,256.25,48C370.8,48,464,141.2,464,255.75S370.8,463.5,256.25,463.5,48.5,370.3,48.5,255.75h-32A239.75,239.75,0,0,0,425.779,425.279,239.75,239.75,0,0,0,256.25,16Z"
             class="ci-primary" />

@@ -21,7 +21,8 @@ body {
 		2px 2px 5px #bcbcbc, -2px -2px 5px #ffffff;
 	min-height: 75vh;
 	max-height: 500px;
-	min-width: 350px;
+	height: 500px;
+	min-width: 400px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
